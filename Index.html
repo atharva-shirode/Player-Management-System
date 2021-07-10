@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index page</title>
+  
+
+<meta name='viewport' content='width=device-width, initial-scale=10'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+    
+</head>
+<body>
+    <center>
+    <h1>Player Data</h1>
+    <div class='content'>
+        <h2>Add</h2>
+        <form id="P-form">
+           
+            <input type="text" name="P_Name" placeholder="Player Name">
+            <input type="text" name="number" placeholder="Player Number">
+            <input type="text" name="Position" placeholder="Playing Position">
+            <input type="text" name="Club" placeholder="Player Club">
+            <input type="text" name="Nation" placeholder="Player Nation">
+            <button id="b1">Add Player</button>
+           
+        </form>
+        <h3>Update</h3>
+        <form id="P-form1" >
+           
+            <input type="text" name="P_Name" placeholder="Player Name">
+            <button id="b2">Select Player</button>
+
+            <div  id='div1' style='display: none;'>
+                <input type="text" name="number" placeholder="Player Number">
+                    <input type="text" name="Position" placeholder="Playing Position">
+                    <input type="text" name="Club" placeholder="Player Club">
+                    <input type="text" name="Nation" placeholder="Player Nation">
+                    <button id='b3'>update player</button>
+            </div>
+            
+                
+           
+            
+        </form>
+        <table id="Player-List">
+            
+        </table>
+    </div>
+    </center>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDC0gSxiYULW3_negGRBbn44cqtWfXIOdQ",
+    authDomain: "adsexp7-5904e.firebaseapp.com",
+    databaseURL: "https://adsexp7-5904e.firebaseio.com",
+    projectId: "adsexp7-5904e",
+    storageBucket: "adsexp7-5904e.appspot.com",
+    messagingSenderId: "187189277615",
+    appId: "1:187189277615:web:06bf18f39cfea36a34755a",
+    measurementId: "G-K4H6F2MX0Y"
+  };
+   //<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db= firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+
+</script>
+    <script src='app.js'></script>
+</body>
+</html>
